@@ -1,0 +1,49 @@
+/* TripDetails.css */
+
+.Map {
+  width: 70%;
+  border: 8px solid #fff; /* Thicker white border */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+  border-radius: 25px; /* Optional: rounded corners */
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+}
+
+@media (max-width: 768px) {
+  .Map {
+    width: 96%;
+  }
+}
+
+.mochi-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15%; /* Adjust the percentage as needed */
+  height: auto;
+}
+
+.marker-text {
+  visibility: hidden;
+  transition: visibility 0.2s;
+}
+
+.Map *:focus {
+  outline: none;
+}
+
+.marker:hover .marker-text {
+  visibility: visible;
+}
+
+.no-focus-outline:focus {
+  outline: none;
+}
+
+.marker-circle {
+  transition: fill 0.3s ease-in-out;
+}
+
+.marker:hover .marker-circle {
+  fill: #000000; /* Black color */
+}

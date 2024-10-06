@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;900&display=swap");
+
+@keyframes animateUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.trip-details {
+  animation: animateUp 0.3s ease-out;
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  border-radius: 5px;
+  z-index: 10;
+  max-width: 90%; /* Adjust as necessary */
+}
+
+.trip-details h2 {
+  margin-top: 0;
+}
+
+.trip-list {
+  list-style-type: none; /* Remove list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.trip-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure people are to the right of the year */
+  margin-bottom: 0.5vw; /* Margin relative to viewport width */
+  padding: 0.5vw; /* Padding relative to viewport width */
+  background-color: rgba(240, 240, 240, 0.9); /* Light background for rows */
+  border-radius: 5px;
+}
+
+.trip-row .year {
+  font-weight: bold;
+  margin-right: 1vw; /* Margin relative to viewport width */
+  font-family: "Google Sans Text", sans-serif;
+  color: #444d6a;
+}
+
+@media (max-width: 768px) {
+  .trip-row .year {
+    font-size: 1.5em; /* Increase font size for mobile view */
+  }
+}
+
+.trip-row .people {
+  display: flex;
+  gap: 0.5vw; /* Gap relative to viewport width */
+}
+
+.person-icon {
+  width: 2.5vw; /* Width relative to viewport width */
+  height: 3vw; /* Height relative to viewport width */
+}
+
+@media (max-width: 768px) {
+  .trip-row {
+    margin: 1.25vw; /* Padding relative to viewport width */
+  }
+  .trip-row .year {
+    font-size: 1.5em; /* Increase font size for mobile view */
+    padding: 0.2em; /* Padding for mobile view */
+  }
+  .person-icon {
+    width: 6vw; /* Width relative to viewport width */
+    height: 6vw; /* Height relative to viewport width */
+  }
+}

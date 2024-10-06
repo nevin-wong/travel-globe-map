@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;900&display=swap");
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.map-container {
+  background-color: #98c0e1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header {
+  font-weight: 900; /* Black weight */
+  text-transform: uppercase;
+  color: #444d6a;
+  font-size: 7vw; /* Adjust font size based on viewport width */
+  white-space: nowrap; /* Prevent text from wrapping */
+  font-family: "Google Sans Text", sans-serif; /* Apply the new font */
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 14vw; /* Adjust font size to be 90% of the viewport width for mobile screens */
+  }
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.map-and-details-container {
+  display: flex;
+  width: 100%;
+}
+
+@keyframes fadeInPushRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInPushLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.city-text {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.city-text {
+  color: #444d6a;
+  font-family: "Google Sans Text", sans-serif;
+  fill: "#000";
+  font-size: 4em;
+  font-weight: bold; /* Make the text bold */
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@media (max-width: 768px) {
+  .city-text {
+    font-size: 6em; /* Increase font size for mobile view */
+  }
+}
